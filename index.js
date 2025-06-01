@@ -262,5 +262,23 @@ function onmousemove(e) {
 //     document.getElementsByTagName("path")[i].setAttribute("stroke", val);
 //   });
 // }
+const dropdownBtn = document.getElementById('dropdownBtn');
+const dropdown = document.getElementById('dropdown');
+
+dropdownBtn.addEventListener('click', () => {
+  dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+});
+
+window.addEventListener('click', (e) => {
+  if (!dropdownBtn.contains(e.target) && !dropdown.contains(e.target)) {
+    dropdown.style.display = 'none';
+  }
+});
+
+
+
+
+
+
 
 
